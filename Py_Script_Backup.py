@@ -1,20 +1,27 @@
 import os, shutil
 
-path = 'C:/Users/Jake/AppData/Local/Programs/Python/Python38/MyScripts'
+Source = 'C:/Users/Jake/AppData/Local/Programs/Python/Python38/MyScripts'
+Destination = 'D:/MyScripts'
 
-print("Before moving file:")
-print(os.listdir(path))
 
-Source = 'C:/Users/Jake/AppData/Local/Programs/Python/Python38/MyScripts/Source'
+def remove_old_backup():
+    shutil.rmtree(Destination)
 
-Destination = 'C:/Users/Jake/AppData/Local/Programs/Python/Python38/MyScripts/Destination'
+def create_backup():
+    path = 'C:/Users/Jake/AppData/Local/Programs/Python/Python38/MyScripts'
 
-dest = shutil.copy(Source, Destination)
+    print("Before moving file:")
+    print(os.listdir(path))
 
-print("After moving file:")
-print(os.listdir(path))
+    dest = shutil.copytree(Source, Destination)
 
-print("Destination path:", dest)
+    print("After moving file:")
+    print(os.listdir(path))
+
+    print("Destination path:", dest)
+
+remove_old_backup()
+create_backup()
 
 #TODO
 
