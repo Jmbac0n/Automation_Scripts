@@ -9,3 +9,6 @@ Desktop to USB
 USB to Desktop
 Laptop to USB
 USB to Laptop
+
+# Time Desync Alert
+Obviously should address the hardware issue but my system clock desyncs at random times. This script will alert me when that happens. 
