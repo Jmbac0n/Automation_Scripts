@@ -6,11 +6,15 @@ def main():
     laptop_src = 'C:/Users/user/AppData/Local/Programs/Python/Python38/MyScripts'
     usb_src = 'D:/MyScripts'
 
-    print("Please select an option: ")
-    print("Enter 1 to save scripts from the Desktop to USB")
-    print("Enter 2 to save scripts from the USB to Desktop")
-    print("Enter 3 to save scripts from the Laptop to USB")
-    print("Enter 4 to save scripts from the USB to Laptop")
+    print("""\
+        *** Script Backup Utility ***
+        
+        Please select an option:
+
+        1. Desktop to USB       2. USB to Desktop
+        3. Laptop to USB        4. USB to Laptop
+        """)
+
     user_input = input()
 
     def remove_old_backup(Destination):
@@ -36,14 +40,20 @@ def main():
         remove_old_backup(laptop_src)
         create_backup(usb_src, laptop_src)
 
+    success_message = ("Backup Sucessful")
+
     if user_input == ("1"):
         Desktop_to_USB()
+        print(success_message)
     elif user_input == ("2"):
         USB_to_Desktop()
+        print(success_message)
     elif user_input == ("3"):
         Laptop_to_USB()
+        print(success_message)
     elif user_input == ("4"):
         USB_to_Laptop()
+        print(success_message)
     else:
         print("Invalid Option")
         main()
