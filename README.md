@@ -11,4 +11,13 @@ Laptop to USB
 USB to Laptop
 
 # Time Desync Alert
-Obviously should address the hardware issue but my system clock desyncs at random times. This script will alert me when that happens. 
+Obviously should address the hardware issue but my system clock desyncs at random times. This script will alert me when that happens. #
+
+# Mesh Cable Calculator
+Basic script for calculating the number of cables needed in a mesh topology. Originally made when first trying out Python. Could technically be used for automation.
+
+# Email Automation
+Sending emails via Python. Primarily useful when set up in an alert capacity.
+
+# USB Email Alert
+An expansion of the email automation. Can send details about a system to an email. Ideal to log usage between certain systems or as a security measure if made capable of autorunning when inserted. 
